@@ -1,0 +1,11 @@
+@media (max-width: 500px) {
+   header p {
+    font-size: 14px;
+   }
+   main {
+      width: 82%;
+   }
+    main h1, h2 {
+    font-size: 17px;
+   }
+}

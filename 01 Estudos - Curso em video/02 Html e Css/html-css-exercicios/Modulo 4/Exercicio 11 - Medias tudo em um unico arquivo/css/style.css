@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+/* Todas as medias em um unico projeto*/
+@media all {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    html, body {
+        background-color: rgba(55, 55, 255, 0.897);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 100vh;
+        width: 100vw;
+        color: white;
+        text-align: center;
+    }
+}
+@media screen and (orientation: portrait) {
+    body {
+        background-image: url(../imagens/cev-portrait.jpg);
+        background-position: center bottom;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    body {
+        background-image: url(../imagens/cev-landscape.jpg);
+        background-position: left bottom;
+    }
+}

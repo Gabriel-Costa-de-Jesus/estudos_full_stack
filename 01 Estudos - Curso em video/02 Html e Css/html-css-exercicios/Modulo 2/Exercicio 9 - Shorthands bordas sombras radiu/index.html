@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shorthands Bordas sombras radius</title>
+    <style>
+        h1 {
+            margin: 10px 20px 10px 20px;
+            padding: 10px 20px 10px 20px;
+            border: 2px solid black;
+            outline: 2px solid red;
+            border-radius: 10px;
+            box-shadow: 2px 2px 2px;
+        }
+        h2 {
+            margin: 10px 20px 10px 20px;
+            padding: 10px;
+            border: 5px solid black;
+            border-image-slice: 27;
+            border-image-repeat: repeat;
+        }
+        #borda {
+            border-image-source: url(bordas\ sites.png);
+        }
+        #a1 {
+            display: block;
+        }
+        #a2 {
+            display: inline-block;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Link Normal</h1>
+    <p>Esse é <a href="#">oi</a> um link normal</p>
+    <p> O link é uma propriedade inline, ou seja da mesma linha<a href="#" id="a1">Link</a> mais ao alterarmos sua propriedade e dar a ele o display block, ele passa a se tornar um bloco</p>
+    <p>Podemos transformar ele em um inline e block, bloco e linha ao mesmo tempo,<a href="#" id="a2">Link</a> isso faz com que ele aceite algumas propriedades do tipo bloco</p>
+    <h2 id="borda">A seguir temos um h2 com bordas decoradas</h2>
+</body>
+</html>

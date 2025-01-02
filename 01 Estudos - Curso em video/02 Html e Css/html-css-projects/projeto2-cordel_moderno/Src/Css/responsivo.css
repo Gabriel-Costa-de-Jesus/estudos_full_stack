@@ -1,0 +1,19 @@
+@media (max-width: 500px) {
+    section p, section.Background-image p{
+        font-size: 25px;
+        
+    }
+    section.Conteudo {
+        padding-left: 20px;
+    }
+    section.Background-image p {
+        left: 4%;
+        width: 370px;
+    }
+    footer {
+        font-size: 20px;
+    }
+    footer a:hover {
+        font-size: 21px;
+    } 
+}

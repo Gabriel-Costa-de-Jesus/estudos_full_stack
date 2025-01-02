@@ -1,0 +1,15 @@
+header{
+    width: 100%;
+    height: 750px;
+    background-image: linear-gradient(to bottom, red, yellow);
+}
+main{
+    width: 100%;
+    height: 750px;
+    background-image: linear-gradient(75deg, blue, yellow);
+}
+footer{
+    width: 100%;
+    height: 750px;
+    background-image: radial-gradient(circle,green, yellow);
+}

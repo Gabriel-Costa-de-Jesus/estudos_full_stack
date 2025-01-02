@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Position</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .divpai {
+            width: 1300px;
+            height: 600px;
+            border: 2px solid black;
+            border-radius: 15px;
+            margin: auto;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            background-color: blueviolet;
+            position: relative;
+            padding: 10px;
+        }
+        #d1 {
+            background-position: left top;
+            background-image: url(img/wallpaper004.jpg);
+        }
+        #d2 {
+            background-position: left center;
+            background-image: url(img/target001.png);
+            background-size: 100% 100%;
+        }
+        #f1 {
+            margin: auto;
+            text-align: center;
+            padding: 10px;
+        }
+        #f2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .divfilha {
+            width: 400px;
+            height: 200px;
+            border: 2px solid black;
+            background-color: yellow;
+        }
+        /* RElativo para div pai e absoluto para filha */
+    </style>
+</head>
+<body>
+    <div class="divpai" id="d1"><div class="divfilha" id="f1">Alinhamento padrão usando margin</div></div>
+    <div class="divpai" id="d2"><div class="divfilha" id="f2">Alinhamento com absoluto e relativo</div>
+</body>
+</html>

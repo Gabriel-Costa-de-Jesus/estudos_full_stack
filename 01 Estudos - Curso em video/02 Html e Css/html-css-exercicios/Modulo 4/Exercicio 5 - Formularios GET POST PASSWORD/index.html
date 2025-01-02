@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Meu primeiro Formulário Completo| Formulário com auto completação de dados e ligação de nome com caixa de texto</h1>
+    <form action="cadastro.php" method="get"> <!--O nome e a caixa de texto tem que estar interligados | Importante-->
+        <p><label for="inome">Nome:</label> <input type="text" name="nome" id="inome"></p>
+        <p><label for="isobrenome">Sobrenome:</label> <input type="text" name="sobrenome" id="isobrenome"></p> <!--Tem que usar o label,for,id para ligar as caixas de texto-->
+        <input type="submit" value="Enviar">
+    </form> <!--Para linguagens de back end o name é importante já no JS o id é importante-->
+  <!--Assunto da segunda aula | O metodo POST e GET tem uma diferença, no metódo GET as informações do usuário fica visível na url, já no post não fica, porém é possível ver no dev tolls na parte do networking-->
+  <!--Usa o get quando a informação não é importante
+      Já o post quando a informação é importante como senhas-->
+
+    <h1>Formulário sem auto completação de dados</h1>
+    <form action="cadastro.php"  autocomplete="off" method="post">
+        <p>Nome: <input type="text" name="nome" id="nome"></p>
+        <p>Sobrenome: <input type="text" name="sobrenome" id="sobrenome"></p>
+        <input type="submit" value="Enviar">
+    </form>
+    <p>Para acessar o próximo formulário clique <a href="pagina02.html">aqui</a></p>
+</body>
+</html>

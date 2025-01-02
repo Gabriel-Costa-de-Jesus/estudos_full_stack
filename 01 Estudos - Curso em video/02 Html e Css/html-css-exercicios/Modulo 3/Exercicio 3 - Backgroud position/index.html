@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Position</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .Retangulo {
+            width: 1300px;
+            height: 300px;
+            border: 2px solid black;
+            border-radius: 15px;
+            margin: auto;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            background-image: url(img/wallpaper003.jpg);
+        }
+        #d1 {
+            background-position: left top;
+        }
+        #d2 {
+            background-position: left center;
+        }
+        #d3 {
+            background-position: right bottom;
+        }
+        #d4 {
+            background-position: center center;
+        }
+    </style>
+</head>
+<body>
+    <div class="Retangulo" id="d1"></div>
+    <div class="Retangulo" id="d2"></div>
+    <div class="Retangulo" id="d3"></div>
+    <div class="Retangulo" id="d4"></div>
+</body>
+</html>

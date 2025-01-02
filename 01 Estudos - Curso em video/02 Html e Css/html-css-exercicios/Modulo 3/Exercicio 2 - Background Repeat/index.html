@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Repeat</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .Retangulo {
+            width: 1300px;
+            height: 500px;
+            border: 2px solid black;
+            border-radius: 15px;
+            margin: auto;
+            margin-bottom: 10px;
+            margin-top: 10px;
+        }
+        h1 {
+            text-align: center;
+            background-color: lawngreen;
+            color: white;
+            text-shadow: 2px 2px 2px black;
+            border-radius: 15px;
+        }
+        #d1 {
+            background-image: url(https://github.com/gustavoguanabara/html-css/raw/master/imagens/mascote.png);
+            background-size: 100px 100px;
+            background-position: center;
+        }
+        #d2 {
+            background-image: url(https://github.com/gustavoguanabara/html-css/raw/master/imagens/mascote.png);
+            background-size: 100px 100px;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #d3 {
+            background-image: url(https://github.com/gustavoguanabara/html-css/raw/master/imagens/mascote.png);
+            background-size: 100px 100px;
+            background-repeat: repeat-x;
+            background-position: center;
+        }
+        #d4 {
+            background-image: url(https://github.com/gustavoguanabara/html-css/raw/master/imagens/mascote.png);
+            background-size: 100px 100px;
+            background-repeat: repeat-y;
+            background-position: center right;
+        }
+    </style>
+</head>
+<body>
+    <div class="Retangulo" id="d1">
+        <h1>Imagem não semantica repetindo</h1>
+    </div>
+    <div class="Retangulo" id="d2">
+        <h1>Imagem não semantica com no repeat</h1>
+    </div>
+    <div class="Retangulo" id="d3">
+        <h1>Imagem não semantica com repeat no eixo x</h1>
+    </div>
+    <div class="Retangulo" id="d4">
+        <h1>Imagem não semantica com repeat no eixo y</h1>
+    </div>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha primeira Tabela</title>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    table {
+        width: 600px;
+        border-collapse: collapse;
+    }
+    tr.linha {
+        background-color: gray;
+    }
+    td {
+        border: 1px solid black;
+        padding: 20px;
+        
+    }
+    table.tamanho td {
+        padding: 10px;
+        height: 100px;
+    }
+    td.dado {
+        background-color: yellow;
+    }
+    .Horizontal-Right {
+        text-align: right;
+    }
+    .Horizontal-Center {
+        text-align: center;
+    }
+    .Horizontal-Left {
+        text-align: left;
+    }
+
+    .Vertical-Top {
+        vertical-align: top;
+    }
+    .Vertical-Middle {
+        vertical-align: middle;
+    }
+    .Vertical-Bottom {
+        vertical-align: bottom;
+    }
+    
+</style>
+
+</head>
+<body>
+    <!-- Hierarquias de Tabelas
+        Table = Tabela
+            Table row = Linha de Tabela
+                Table Header = Cabecalho da Tabela
+                Table Data = dado da tabela
+ -->
+    <h1><a href="tabelasgrandes.html">Next Page</a></h1>
+    <h1>Minha primeira Tabela</h1>
+    <table>
+        <tr> <!--Primeira Linha-->
+            <td>A1</td>  <!--Células da Tabela-->
+            <td>B1</td>  <!--Células da Tabela-->
+            <td>C1</td>  <!--Células da Tabela-->
+        </tr>
+        <tr class="linha"> <!--Segunda Linha-->
+            <td>A2</td>  <!--Células da Tabela-->
+            <td>B2</td>  <!--Células da Tabela-->
+            <td>C2</td>  <!--Células da Tabela-->
+        </tr>
+        <tr> <!--Terceira Linha-->
+            <td>A3</td>  <!--Células da Tabela-->
+            <td>B3</td>  <!--Células da Tabela-->
+            <td>C3</td>  <!--Células da Tabela-->
+        </tr>
+        <tr> <!--Quarta Linha-->
+            <td>A4</td>                 <!--Células da Tabela-->
+            <td class="dado">B4</td>    <!--Células da Tabela-->
+            <td>C4</td>                 <!--Células da Tabela-->
+        </tr>
+    </table>
+    <h1>Minha segunda Tabela Alinhamento Horizontal</h1>
+    <table>
+        <tr>
+            <td class="Horizontal-Right">A1</td>
+            <td class="Horizontal-Right">B1</td> 
+            <td class="Horizontal-Right">C1</td>
+        </tr>
+        <tr>
+            <td class="Horizontal-Center">A1</td>
+            <td class="Horizontal-Center">B1</td> 
+            <td class="Horizontal-Center">C1</td>
+        </tr>
+        <tr>
+            <td class="Horizontal-Left">A1</td>
+            <td class="Horizontal-Left">B1</td> 
+            <td class="Horizontal-Left">C1</td>
+        </tr>
+    </table>
+    <h1>Minha terceira Tabela Alinhamento Vertical</h1>
+    <table class="tamanho">
+        <tr>
+            <td class="Vertical-Top">A1</td>
+            <td class="Vertical-Top">B1</td> 
+            <td class="Vertical-Top">C1</td>
+        </tr>
+        <tr>
+            <td class="Vertical-Middle">A1</td>
+            <td class="Vertical-Middle">B1</td> 
+            <td class="Vertical-Middle">C1</td>
+        </tr>
+        <tr>
+            <td class="Vertical-Bottom">A1</td>
+            <td class="Vertical-Bottom">B1</td> 
+            <td class="Vertical-Bottom">C1</td>
+        </tr>
+    </table>
+    <h1>Minha quarta Tabela com mesclagem</h1>
+    <table class="tamanho">
+        <tr>
+            <td>A1</td>
+            <td colspan="2">B1</td> 
+        </tr>
+        <tr>
+            <td>A1</td>
+            <td>B1</td> 
+            <td rowspan="2">C1</td>
+        </tr>
+        <tr>
+            <td>A1</td>
+            <td >B1</td> 
+        </tr>
+    </table>
+
+</body>
+</html>

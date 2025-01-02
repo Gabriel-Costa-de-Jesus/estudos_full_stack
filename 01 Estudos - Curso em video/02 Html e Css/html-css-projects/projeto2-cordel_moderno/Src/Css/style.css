@@ -1,0 +1,94 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'Dmserifr';
+    src: url(../Fonts/DMSerifText-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Dmserifi';
+    src: url(../Fonts/DMSerifText-Italic.ttf) format('truetype');
+}
+:root {
+    --Font-header: 'Dmserifr', sans-serif;
+    --Font-main: 'Dmserifi', sans-serif;
+}
+header {
+    height: 150px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.363);
+}
+header h1 {
+    padding: 35px 0px 10px 0px;
+    font-family: var(--Font-header);
+    letter-spacing: 2px;  /* Espaçamento entre letras  */
+    word-spacing: 2px; /* Espaçamento entre palavras  */
+    font-size: 40px;
+}
+header a {
+    font-weight: bolder;
+    color: white;
+    font-size: 20px;
+}
+header a:hover {
+    text-decoration: underline;
+    color: brown;
+}
+
+section {
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.473);
+    border: 1px solid rgba(0, 0, 0, 0.13);
+}
+section.Conteudo {
+    padding: 100px 0px 50px 50px;
+    font-family: var(--Font-main);
+    font-size: 30px;
+    letter-spacing: 2px;
+    word-spacing: 4px; 
+}
+section.Background-image p {
+    font-family: var(--Font-main);
+    font-size: 30px;
+    letter-spacing: 2px;
+    word-spacing: 4px; 
+    color: white;
+    width: 450px;
+    background-color: rgba(0, 0, 0, 0.212);
+    position: absolute;
+    top: 26%;
+    left: 3.1%;
+}
+section.Background-image {
+    height: 600px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black;
+    position: relative;
+}
+section#Background-image1 {
+    background-image: url(../Img/background001.jpg);
+}
+section#Background-image2 {
+    background-image: url(../Img/background002.jpg);
+}
+footer {
+    background-color: black;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+}
+footer a {
+    color: white;
+    font-weight: bolder;
+    padding: 5px;
+    border-radius: 5px;
+}
+footer a:hover {
+    font-size: 32px;
+    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.226);
+}
+footer a:active {
+    color: red;
+}
