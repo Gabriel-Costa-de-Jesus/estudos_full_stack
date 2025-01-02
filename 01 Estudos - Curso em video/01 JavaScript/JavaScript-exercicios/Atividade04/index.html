@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        #calculadora {
+            border: 1px solid black;
+            width: 300px;
+            height: 300px;
+        }
+        #resultado {
+            border: 1px solid black;
+            width: 50px;
+            height: 10px;
+            display: inline;
+            background-color: rgba(0, 0, 0, 0.068);
+        }
+        #text1 {
+            width: 50px;
+        }
+        #text2 {
+            width: 50px;
+        }
+        #mais {
+           display: inline; 
+        }
+    </style>
+</head>
+<body>
+    <div id="calculadora">
+        <input type="number" name="text1" id="text1">
+        <p id="mais">+</p>
+        <input type="number" name="text2" id="text2">
+        <input type="button" value="Somar" onclick="somar()">
+        <div id="resultado"> Resultado</div>
+    </div>
+    <script>
+        function somar() {
+            var text1 = document.querySelector('#text1')
+            var text2 = document.querySelector('#text2')
+            var resultado = document.querySelector('#resultado')
+            var n1 = Number(text1.value)
+            var n2 = Number(text2.value)
+            var soma = n1 + n2
+            resultado.innerHTML = `${soma}`
+        }
+    </script>
+</body>
+</html>

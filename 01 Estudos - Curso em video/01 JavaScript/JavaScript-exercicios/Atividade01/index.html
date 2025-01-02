@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dando passos no javascript</title>
+</head>
+<body>
+    <script>
+        window.alert('bem-vindo')
+        window.confirm('tudo bem?')
+        window.prompt('escreva algo')
+
+        var nome= window.prompt('Qual seu nome?')
+        window.alert('Olá '+ nome + ' Seja bem vindo')
+        var  n1= Number (window.prompt('escreva um number'))
+        var  n2= Number (window.prompt('escreva outro number'))
+        soma=n1+n2
+        window.alert(nome +' a soma é ' + soma)
+        var nota=10
+        var idade=17
+        window.alert(`O aluno ${nome} com ${idade} anos tirou a nota ${nota} em todas as materias`)
+        document.write(`${nome} Seu nome tem ${nome.length} letras <br> `)
+        document.write(`${nome} Seu nome em maisculo é ${nome.toUpperCase()} <br>`)
+        document.write(`${nome} Seu nome minusculo é ${nome.toLowerCase()} `)
+    </script>
+</body>
+</html>

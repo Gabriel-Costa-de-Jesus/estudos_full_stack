@@ -1,0 +1,16 @@
+def menu_aviao():
+    print("--"*30)
+    print("Escolha a opção desejada")
+    print("1 - Cadastrar Avião")
+    print("2 - Exibir Aviões Cadastrado nos Sistemas")
+    print("3 - Cadastrar Cliente")
+    print("4 - Cancelar reserva")
+    print("5 - Reservas Cadastradas no Sistema")
+    print("6 - Buscar cliente Cadastrado no Sistema")
+    print("7 - Alterar Passageiro")
+    print("8 - Relatório de todas as informações do Sistema")
+    print("9 - Ranking dos voos mais ocupados")
+    print("10 - Sair")
+    opcao = int(input("Digite o número da sua Opção: "))
+    print("--"*30)
+    return opcao

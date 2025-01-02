@@ -1,0 +1,40 @@
+body {
+    background-image: url(img/fundo.png);
+}
+#content {margin: -10px;}
+#img-capa{width: 100%;}
+#nav {
+    margin-top: -5px;
+    padding: 18px;
+    background-color: #c5c5b2;
+}
+#nav a{
+    color: #4b566a;
+    padding: 5px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+#nav a:hover {
+    text-decoration: underline;
+}
+#nav a:active {
+    text-decoration: underline;
+    color: red;
+}
+#conteudo {
+    background-color: white;
+    padding: 10px;
+}
+.img-campanhas {
+    border: 10px solid #c3c3ae;
+}
+h1 {
+    color: #828271;
+    font: 1.3em arial, helvetica, sans-serif;
+}
+p {
+    font: 18px arial, helvetica, sans-serif;
+}
+#p-direitos {
+    text-align: center;  
+}

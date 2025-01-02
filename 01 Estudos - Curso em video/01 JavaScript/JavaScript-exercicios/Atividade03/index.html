@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events DOM</title>
+    <style>
+        #paragrafo {
+           position: absolute;
+        }
+        #area {
+            position: relative;
+        }
+        .extra {
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div id="area"><p id="paragrafo">Interaja</p></div>
+    <div id="extra">oi</div>
+   <script>
+    var area=window.document.querySelector('#area')
+    var paragrafo=window.document.querySelector('#paragrafo')
+    area.addEventListener('click',clicar)
+    area.addEventListener('mouseenter',entrar)
+    area.addEventListener('mouseout',sair)
+    area.style.background= 'black'
+    area.style.width= '200px'
+    area.style.height= '200px'
+    area.style.color= 'white'
+
+   
+
+
+
+    function clicar(){
+        area.innerText = 'clicou'
+        area.style.background= 'red'
+    }
+    function entrar(){
+        area.innerText = 'entrou'
+        
+    }
+    function sair(){
+        area.innerText = 'saiu'
+        area.style.background= 'green'
+    }
+   </script> 
+</body>
+</html>

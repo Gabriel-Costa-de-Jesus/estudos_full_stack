@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando o dom</title>
+</head>
+<body>
+    <h1>Utilizando o DOM</h1>
+    <p>Aprendendo a como utlizar o DOM</p>
+    <p>Algumas funções do senhor <strong>DOM</strong></p>
+    <div>Clique aqui</div>
+    <script>
+        var corpodosite= window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1] 
+        window.document.writeln(p1.innerText)
+        p1.style.color= 'red'
+        corpodosite.style.background='blue'
+        window.document.write(p1.innerHTML)
+    </script>
+</body>
+</html>

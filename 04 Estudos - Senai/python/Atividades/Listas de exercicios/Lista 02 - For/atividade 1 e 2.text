@@ -1,0 +1,7 @@
+1) Para que serve o for?
+    O for é uma estrutura de código na programção que permite exercutar um bloco de código mais de uma vez.
+2) Qual a estrutura do for?
+    for item in sequencia:
+        # Faça algo com o item
+
+
