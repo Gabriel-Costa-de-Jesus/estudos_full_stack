@@ -1,6 +1,6 @@
 # Olá! 👋
 
-Bem-vindo ao meu repositório de exercícios e estudos de programação! Eu sou [Seu Nome] e estou sempre aprendendo e explorando o mundo do desenvolvimento. Este espaço é uma coleção de tudo o que já aprendi até agora.
+Bem-vindo ao meu repositório de exercícios e estudos de programação! Eu me chamo Gabriel e estou sempre aprendendo e explorando o mundo do desenvolvimento. Este espaço é uma coleção de tudo o que já aprendi até agora.
 
 ---
 
