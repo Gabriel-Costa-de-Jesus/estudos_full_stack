@@ -1,5 +1,5 @@
 body {
-    background-image: url(img/fundo.png);
+    background-image: url(../img/fundo.png);
 }
 #content {margin: -10px;}
 #img-capa{width: 100%;}
