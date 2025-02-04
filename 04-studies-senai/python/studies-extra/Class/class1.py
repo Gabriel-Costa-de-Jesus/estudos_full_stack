@@ -13,3 +13,5 @@ print(computador2.marca,computador2.memoria_ram,computador2.placa_de_video)
 print(computador3.marca,computador3.memoria_ram,computador3.placa_de_video)
 
 #Essa forma no entanto não está correta pois o propósito de uma classe é organizar as informações para que possam ser acessadas fácilmente
+
+# Vídeo Python Classes e Métodos - Em Menos de 10 Minutos-1

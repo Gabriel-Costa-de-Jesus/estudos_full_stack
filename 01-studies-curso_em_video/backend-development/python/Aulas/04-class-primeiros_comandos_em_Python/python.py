@@ -31,3 +31,5 @@ while (opcao != 0):
     else:
         print("Opção Inválida - Tente novamente")
     
+# Código referente a aula Aula 4 – Primeiros comandos em Python3
+
