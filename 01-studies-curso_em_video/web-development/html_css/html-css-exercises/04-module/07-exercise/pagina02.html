@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página 02 - Formulário</title>
+</head>
+<body>
+    <h1>Formulário</h1> <!--Deve fazer os campos de formulários com divs, mas dessa vez vou fazer com paragráfos-->
+    <form action="cadastro.php" method="post" autocomplete="on">
+      <p>
+        <label for="iestado">Estado</label>
+        <select name="estado" id="iest">
+            <option value="BA">Bahia</option>
+            <option value="AL">Alagoas</option>
+            <option value="CE">Ceara</option>
+        </select>
+      </p>
+      <h2>Da para colocar grupos nos options</h2>
+      <select name="estado2" id="iestado2">
+          <optgroup label="Região Sudeste">
+            <option value="MG">Minas Gerais</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="SP">São Paulo</option>
+          </optgroup>
+          <optgroup label="Região Nordeste">
+            <option value="AL">Alagoas</option>
+            <option value="CE">Ceara</option>
+            <option value="BA" selected>Bahia</option>
+          </optgroup>
+      </select>
+      <p>
+        <label for="iprof">Profissões</label>
+        <input type="text" name="prof" id="iprof" list="listaprof">
+        <datalist id="listaprof">
+            <option value="ADM">Administrador</option>
+            <option value="TI">Técnico de informática</option>
+            <option value="PR">Programador</option>
+            <option value="DEV">Desenvolvedor de Sistemas</option>
+        </datalist>
+      </p>
+      <p>
+        <label for="imsg">Mensagem 1</label>
+        <textarea name="msg" id="imsg" placeholder="Digite sua mensagem"></textarea>
+      </p>
+      <p>
+        <label for="imsg2">Mensagem 2</label>
+        <textarea name="msg2" id="imsg2" cols="30" rows="5" placeholder="Cols e rowns define a altura e largura das palavras que vão aparecer na tela"></textarea>
+      </p>
+      <p>
+          <input type="submit" value="Enviar">
+          <input type="reset" value="Limpar">
+      </p>
+    </form>
+    <p>Para Voltar <a href="index.html">aqui</a></p>
+</body>
+</html>
+<!-- Mais elementos de formulário -->

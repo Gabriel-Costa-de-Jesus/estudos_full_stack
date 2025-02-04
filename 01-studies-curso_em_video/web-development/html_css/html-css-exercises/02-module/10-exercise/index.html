@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura de um site</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: darkgray;
+            margin: 0px;
+        }
+        header {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px 0px;
+        }
+        nav {
+            background-color: grey;
+            padding: 3px;
+            box-shadow: 2px 2px 4px black;
+            border-radius: 5px;
+        }
+        nav > a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            margin-left: 30px;
+        }
+        nav > a:hover {
+            text-decoration: underline;
+            color: green;
+            background-color: rgba(0, 0, 0, 0.404);
+        }
+        main {
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 20px 0px;
+            box-shadow: 2px 2px 4px black;
+        }
+        section#assuntos > p {
+            color: rgb(36, 101, 185);
+        }
+        article {
+            background-color: lightgray;
+            padding: 5px;
+        }
+        article > aside {
+            background-color: gray;
+        }
+        footer {
+            background-color: black;
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu site</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+    <main>
+        <section id="assuntos">
+            <p>Esportes Política Tecnologia</p>
+        </section>
+        <section id="noticias">
+            <article>
+                <h2>Noticias sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam libero molestias nobis delectus rem laboriosam, aliquam sequi minima sit, officia sint magnam deleniti fugiat ipsam. Voluptatum quos cumque in omnis? Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet nam eum assumenda temporibus impedit et, at quibusdam quod rem nesciunt accusamus nisi odio exercitationem nemo aliquam mollitia architecto, fuga vel.</p>
+                <aside>
+                    <p>Artigo escrito por José da Silva</p>
+                </aside>
+            </article>
+        </section>
+    </main>
+    <footer> Desenvolvido por Gabriel Costa | Autor Original: Curso em vídeo</footer>
+</body>
+</html>
+
+<!-- Objetivo do exercício - Criação de um site simples utilizando todos os elementos aprendidos até agora -->

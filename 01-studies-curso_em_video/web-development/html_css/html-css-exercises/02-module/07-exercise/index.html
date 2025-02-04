@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes</title>
+    <style>
+        body {
+            background-color: burlywood;
+        }
+        main {
+            margin: auto;
+            width: 800px;
+            height: 600px;
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 5px 5px 20px;
+        }
+        .padraodiv {
+            width: 200px;
+            height: 200px;
+            border-style: solid;
+            display: inline-block;
+            text-align: center;
+            margin: 10px 20px 10px 20px;
+        }
+        .padraodiv:hover {
+            background-color: yellow;
+        }
+        #d4 {
+            width: 200px;
+            height: 200px;
+            border-style: solid;
+            margin: 10px 20px 10px 20px;
+            text-align: center;
+        }
+        #d4 > p {
+            display: none;
+        }
+        #d4:hover > p {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Uma pseudo-classe em HTML e CSS é uma palavra-chave que pode ser adicionada a seletores para especificar o estado especial de um elemento sem precisar adicionar uma classe ou ID no HTML. É como um "extra" que você pode aplicar aos elementos para mudarem de aparência ou comportamento em situações específicas. -->
+     <!-- #d4 >p Siginifica que está dentro > -->
+    <main>
+        <div id="d1" class="padraodiv">01</div> 
+        <div id="d2" class="padraodiv">02</div>
+        <div id="d3" class="padraodiv">03</div>
+        <div id="d4">Passe o mouse aqui<p>Texto Escondido</p></div>
+    </main>
+</body>
+</html>
+
+<!-- Objetivo do exercício - Criação de pseudo classes -->

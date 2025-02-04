@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas grandes</title>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    table {
+        width: 500px;
+        border-collapse: collapse;
+    }
+    td, th {
+        border: 1px solid black;
+        padding: 10px;
+    }
+    
+    
+</style>
+
+</head>
+<body>
+    <!-- Valores do scope:
+col: Especifica que o cabeçalho se aplica a toda a coluna em que está. Ou seja que a informação referente ao cabecalho está abaixo
+Exemplo:
+html
+Copiar código
+<th scope="col">Nome</th>
+
+row: Especifica que o cabeçalho se aplica a toda a linha em que está. Ou seja que a informação referente ao cabecalho está ao lado
+Exemplo:
+html
+Copiar código
+<th scope="row">João</th>
+
+colgroup: Especifica que o cabeçalho se aplica a um grupo de colunas. Ou seja, é uma informação que se refere a mais de um grupo de colunas
+Exemplo:
+html
+Copiar código
+<th scope="colgroup">Informações Pessoais</th>
+
+rowgroup: Especifica que o cabeçalho se aplica a um grupo de linhas. mesma coisa que botei acima, veja o dasafio tabela 2 para mais informações
+Exemplo:
+html
+Copiar código
+<th scope="rowgroup">Grupo A</th>
+ -->
+    <h1><a href="2tabelasgrandes.html">Back Page</a> | <a href="4tabelazebrada.html">Next Page</a></h1>
+    <h1>Minha primeira Tabela</h1>
+    <table>
+        <thead>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Cidade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">João</th>
+            <td>25</td>
+            <td>São Paulo</td>
+          </tr>
+          <tr>
+            <th scope="row">Ana</th>
+            <td>30</td>
+            <td>Rio de Janeiro</td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+      <br>
+      <table>
+        <thead>
+          <tr>
+            <th scope="colgroup" colspan="2">Informações Pessoais</th>
+            <th scope="colgroup" colspan="2">Informações de Contato</th>
+          </tr>
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Cidade</th>
+            <th scope="col">Telefone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="rowgroup" rowspan="2">Grupo A</th>
+            <th scope="row">João</th>
+            <td>25</td>
+            <td>São Paulo</td>
+            <td>(11) 1234-5678</td>
+          </tr>
+          <tr>
+            <th scope="row">Ana</th>
+            <td>30</td>
+            <td>Rio de Janeiro</td>
+            <td>(21) 8765-4321</td>
+          </tr>
+          <tr>
+            <th scope="rowgroup" rowspan="2">Grupo B</th>
+            <th scope="row">Carlos</th>
+            <td>28</td>
+            <td>Belo Horizonte</td>
+            <td>(31) 1234-8765</td>
+          </tr>
+          <tr>
+            <th scope="row">Beatriz</th>
+            <td>22</td>
+            <td>Curitiba</td>
+            <td>(41) 4321-5678</td>
+          </tr>
+        </tbody>
+      </table>
+      
+</body>
+</html>
+
+<!-- Utilizando propriedades de Escopos em tabela -->
