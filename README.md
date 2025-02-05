@@ -59,10 +59,12 @@ Sinta-se à vontade para explorar, dar feedback ou contribuir! 😊
 ###### 💪 html-css-exercise  
 - 📘 Exercícios realizados durante o curso.  
 ⚠️ **Importante:** Veja a documentação completa para entender cada solução.  
+👉 [Visualizar a Wiki](#)  
 
 ###### 🚀 html-css-projects  
 - 📁 Projetos desenvolvidos no curso.  
 ⚠️ **Importante:** Consulte a documentação para entender os raciocínios aplicados.  
+👉 [Visualizar a Wiki](#)  
 
 ##### 💡 JavaScript  
 - Seção dedicada aos estudos de JavaScript.  
@@ -70,7 +72,9 @@ Sinta-se à vontade para explorar, dar feedback ou contribuir! 😊
 ###### 💪 javascript-exercise  
 - 📘 Exercícios resolvidos.  
 ⚠️ **Importante:** Consulte a documentação para entender as soluções.  
+👉 [Visualizar a Wiki](#)  
 
 ###### 🚀 javascript-projects  
 - 📁 Projetos realizados durante o curso.  
-⚠️ **Importante:** Veja a documentação completa para entender cada projeto.  
+⚠️ **Importante:** Veja a documentação completa para entender cada projeto. 
+👉 [Visualizar a Wiki](#)   
