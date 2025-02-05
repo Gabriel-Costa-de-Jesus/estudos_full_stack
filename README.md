@@ -24,3 +24,53 @@ Este repositório é dividido em seções para facilitar a navegação pelos exe
 ---
 
 Sinta-se à vontade para explorar, dar feedback ou contribuir! 😊
+
+## 🚀 Instruções de Navegação  
+
+### 📁 01-studies-curso_em_video  
+- Nesta pasta, você encontra meus projetos e exercícios do Curso em Vídeo, tanto em back-end quanto front-end.  
+
+---
+
+#### 🛠️ backend-development  
+- Contém todas as linguagens de programação back-end que estudei até agora.  
+
+##### 🐍 Python  
+- Esta seção reúne tudo o que já estudei sobre Python.  
+
+###### 📚 class  
+- 📄 Todos os códigos fornecidos em cada aula para aprendizado.  
+⚠️ **Importante:** Leia a documentação completa para entender cada código.  
+👉 [Visualizar a Wiki](#)  
+
+###### 💪 exercise  
+- 📝 Exercícios realizados no curso.  
+⚠️ **Importante:** Consulte a documentação para entender o raciocínio das soluções.  
+👉 [Visualizar a Wiki](#)  
+
+---
+
+#### 🎨 frontend-development  
+- Inclui todas as linguagens de programação front-end estudadas até o momento.  
+
+##### 🧑‍🎨 html_css  
+- Conteúdos sobre HTML e CSS.  
+
+###### 💪 html-css-exercise  
+- 📘 Exercícios realizados durante o curso.  
+⚠️ **Importante:** Veja a documentação completa para entender cada solução.  
+
+###### 🚀 html-css-projects  
+- 📁 Projetos desenvolvidos no curso.  
+⚠️ **Importante:** Consulte a documentação para entender os raciocínios aplicados.  
+
+##### 💡 JavaScript  
+- Seção dedicada aos estudos de JavaScript.  
+
+###### 💪 javascript-exercise  
+- 📘 Exercícios resolvidos.  
+⚠️ **Importante:** Consulte a documentação para entender as soluções.  
+
+###### 🚀 javascript-projects  
+- 📁 Projetos realizados durante o curso.  
+⚠️ **Importante:** Veja a documentação completa para entender cada projeto.  
