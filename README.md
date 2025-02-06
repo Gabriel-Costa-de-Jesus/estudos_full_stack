@@ -78,3 +78,100 @@ Sinta-se à vontade para explorar, dar feedback ou contribuir! 😊
 - 📁 Projetos realizados durante o curso.  
 ⚠️ **Importante:** Veja a documentação completa para entender cada projeto. 
 👉 [Visualizar a Wiki](#)   
+
+---
+
+### 📁 02-studies-udemy 
+- Nesta pasta, você encontra meus projetos e exercícios da udemy, tanto em back-end quanto front-end.  
+
+---
+
+#### 🛠️ backend-development  
+- Contém todas as linguagens de programação back-end que estudei até agora.  
+
+##### 🐍 Python  
+- Esta seção reúne tudo o que já estudei sobre Python.  
+
+###### 💪 python-exercise  
+- 📘 Exercícios realizados durante o curso.  
+⚠️ **Importante:** Veja a documentação completa para entender cada solução.  
+👉 [Visualizar a Wiki](#)  
+
+###### 🚀 python-projects  
+- 📁 Projetos desenvolvidos no curso.  
+⚠️ **Importante:** Consulte a documentação para entender os raciocínios aplicados.  
+👉 [Visualizar a Wiki](#)  
+
+---
+
+#### 🎨 frontend-development  
+- Inclui todas as linguagens de programação front-end estudadas até o momento.  
+
+##### 🧑‍🎨 html_css  
+- Conteúdos sobre HTML e CSS.  
+
+###### 💪 html-css-exercise  
+- 📘 Exercícios realizados durante o curso.  
+⚠️ **Importante:** Veja a documentação completa para entender cada solução.  
+👉 [Visualizar a Wiki](#)  
+
+###### 🚀 html-css-projects  
+- 📁 Projetos desenvolvidos no curso.  
+⚠️ **Importante:** Consulte a documentação para entender os raciocínios aplicados.  
+👉 [Visualizar a Wiki](#)  
+
+##### 💡 JavaScript  
+- Seção dedicada aos estudos de JavaScript.  
+
+###### 💪 javascript-exercise  
+- 📘 Exercícios resolvidos.  
+⚠️ **Importante:** Consulte a documentação para entender as soluções.  
+👉 [Visualizar a Wiki](#)  
+
+###### 🚀 javascript-projects  
+- 📁 Projetos realizados durante o curso.  
+⚠️ **Importante:** Veja a documentação completa para entender cada projeto. 
+👉 [Visualizar a Wiki](#)   
+
+
+---
+
+### 📁 03-studies-senai  
+- Nesta pasta, você encontra meus projetos e exercícios do Curso técnico do Senai, tanto em back-end quanto front-end.  
+
+---
+
+#### 🛠️ backend-development  
+- Contém todas as linguagens de programação back-end que estudei até agora.  
+
+##### ☕ Java  
+- Esta seção reúne tudo o que já estudei sobre Python.  
+
+###### 💪 java-exercise  
+- 📘 Exercícios realizados durante o curso.  
+⚠️ **Importante:** Veja a documentação completa para entender cada solução.  
+👉 [Visualizar a Wiki](#)  
+
+###### 🚀 java-projects  
+- 📁 Projetos desenvolvidos no curso.  
+⚠️ **Importante:** Consulte a documentação para entender os raciocínios aplicados.  
+👉 [Visualizar a Wiki](#) 
+
+##### 🐍 Python  
+- Esta seção reúne tudo o que já estudei sobre Python.  
+
+###### 💪 python-exercise  
+- 📘 Exercícios realizados durante o curso.  
+⚠️ **Importante:** Veja a documentação completa para entender cada solução.  
+👉 [Visualizar a Wiki](#)  
+
+###### 🚀 python-projects  
+- 📁 Projetos desenvolvidos no curso.  
+⚠️ **Importante:** Consulte a documentação para entender os raciocínios aplicados.  
+👉 [Visualizar a Wiki](#)  
+
+---
+
+#### 🎨 frontend-development  
+- Inclui todas as linguagens de programação front-end estudadas até o momento.  
+⚠️ No momento não há estudos de programação front-end
