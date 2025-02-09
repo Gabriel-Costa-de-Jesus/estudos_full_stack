@@ -41,12 +41,12 @@ Sinta-se à vontade para explorar, dar feedback ou contribuir! 😊
 ###### 📚 class  
 - 📄 Todos os códigos fornecidos em cada aula para aprendizado.  
 ⚠️ **Importante:** Leia a documentação completa para entender cada código.  
-👉 [Visualizar a Wiki](#)  
+👉 [Visualizar a Wiki](https://github.com/Gabriel-Costa-de-Jesus/estudos_full_stack/wiki)  
 
 ###### 💪 exercise  
 - 📝 Exercícios realizados no curso.  
 ⚠️ **Importante:** Consulte a documentação para entender o raciocínio das soluções.  
-👉 [Visualizar a Wiki](#)  
+👉 [Visualizar a Wiki](https://github.com/Gabriel-Costa-de-Jesus/estudos_full_stack/wiki)  
 
 ---
 
@@ -59,12 +59,12 @@ Sinta-se à vontade para explorar, dar feedback ou contribuir! 😊
 ###### 💪 html-css-exercise  
 - 📘 Exercícios realizados durante o curso.  
 ⚠️ **Importante:** Veja a documentação completa para entender cada solução.  
-👉 [Visualizar a Wiki](#)  
+👉 [Visualizar a Wiki](https://github.com/Gabriel-Costa-de-Jesus/estudos_full_stack/wiki)  
 
 ###### 🚀 html-css-projects  
 - 📁 Projetos desenvolvidos no curso.  
 ⚠️ **Importante:** Consulte a documentação para entender os raciocínios aplicados.  
-👉 [Visualizar a Wiki](#)  
+👉 [Visualizar a Wiki](https://github.com/Gabriel-Costa-de-Jesus/estudos_full_stack/wiki)  
 
 ##### 💡 JavaScript  
 - Seção dedicada aos estudos de JavaScript.  
@@ -72,12 +72,12 @@ Sinta-se à vontade para explorar, dar feedback ou contribuir! 😊
 ###### 💪 javascript-exercise  
 - 📘 Exercícios resolvidos.  
 ⚠️ **Importante:** Consulte a documentação para entender as soluções.  
-👉 [Visualizar a Wiki](#)  
+👉 [Visualizar a Wiki](https://github.com/Gabriel-Costa-de-Jesus/estudos_full_stack/wiki)  
 
 ###### 🚀 javascript-projects  
 - 📁 Projetos realizados durante o curso.  
 ⚠️ **Importante:** Veja a documentação completa para entender cada projeto. 
-👉 [Visualizar a Wiki](#)   
+👉 [Visualizar a Wiki](https://github.com/Gabriel-Costa-de-Jesus/estudos_full_stack/wiki)   
 
 ---
 
@@ -95,12 +95,12 @@ Sinta-se à vontade para explorar, dar feedback ou contribuir! 😊
 ###### 💪 python-exercise  
 - 📘 Exercícios realizados durante o curso.  
 ⚠️ **Importante:** Veja a documentação completa para entender cada solução.  
-👉 [Visualizar a Wiki](#)  
+👉 [Visualizar a Wiki](https://github.com/Gabriel-Costa-de-Jesus/estudos_full_stack/wiki)  
 
 ###### 🚀 python-projects  
 - 📁 Projetos desenvolvidos no curso.  
 ⚠️ **Importante:** Consulte a documentação para entender os raciocínios aplicados.  
-👉 [Visualizar a Wiki](#)  
+👉 [Visualizar a Wiki](https://github.com/Gabriel-Costa-de-Jesus/estudos_full_stack/wiki)  
 
 ---
 
@@ -113,12 +113,12 @@ Sinta-se à vontade para explorar, dar feedback ou contribuir! 😊
 ###### 💪 html-css-exercise  
 - 📘 Exercícios realizados durante o curso.  
 ⚠️ **Importante:** Veja a documentação completa para entender cada solução.  
-👉 [Visualizar a Wiki](#)  
+👉 [Visualizar a Wiki](https://github.com/Gabriel-Costa-de-Jesus/estudos_full_stack/wiki)  
 
 ###### 🚀 html-css-projects  
 - 📁 Projetos desenvolvidos no curso.  
 ⚠️ **Importante:** Consulte a documentação para entender os raciocínios aplicados.  
-👉 [Visualizar a Wiki](#)  
+👉 [Visualizar a Wiki](https://github.com/Gabriel-Costa-de-Jesus/estudos_full_stack/wiki)  
 
 ##### 💡 JavaScript  
 - Seção dedicada aos estudos de JavaScript.  
@@ -126,12 +126,12 @@ Sinta-se à vontade para explorar, dar feedback ou contribuir! 😊
 ###### 💪 javascript-exercise  
 - 📘 Exercícios resolvidos.  
 ⚠️ **Importante:** Consulte a documentação para entender as soluções.  
-👉 [Visualizar a Wiki](#)  
+👉 [Visualizar a Wiki](https://github.com/Gabriel-Costa-de-Jesus/estudos_full_stack/wiki)  
 
 ###### 🚀 javascript-projects  
 - 📁 Projetos realizados durante o curso.  
 ⚠️ **Importante:** Veja a documentação completa para entender cada projeto. 
-👉 [Visualizar a Wiki](#)   
+👉 [Visualizar a Wiki](https://github.com/Gabriel-Costa-de-Jesus/estudos_full_stack/wiki)   
 
 
 ---
@@ -150,12 +150,12 @@ Sinta-se à vontade para explorar, dar feedback ou contribuir! 😊
 ###### 💪 java-exercise  
 - 📘 Exercícios realizados durante o curso.  
 ⚠️ **Importante:** Veja a documentação completa para entender cada solução.  
-👉 [Visualizar a Wiki](#)  
+👉 [Visualizar a Wiki](https://github.com/Gabriel-Costa-de-Jesus/estudos_full_stack/wiki)  
 
 ###### 🚀 java-projects  
 - 📁 Projetos desenvolvidos no curso.  
 ⚠️ **Importante:** Consulte a documentação para entender os raciocínios aplicados.  
-👉 [Visualizar a Wiki](#) 
+👉 [Visualizar a Wiki](https://github.com/Gabriel-Costa-de-Jesus/estudos_full_stack/wiki) 
 
 ##### 🐍 Python  
 - Esta seção reúne tudo o que já estudei sobre Python.  
@@ -163,12 +163,12 @@ Sinta-se à vontade para explorar, dar feedback ou contribuir! 😊
 ###### 💪 python-exercise  
 - 📘 Exercícios realizados durante o curso.  
 ⚠️ **Importante:** Veja a documentação completa para entender cada solução.  
-👉 [Visualizar a Wiki](#)  
+👉 [Visualizar a Wiki](https://github.com/Gabriel-Costa-de-Jesus/estudos_full_stack/wiki)  
 
 ###### 🚀 python-projects  
 - 📁 Projetos desenvolvidos no curso.  
 ⚠️ **Importante:** Consulte a documentação para entender os raciocínios aplicados.  
-👉 [Visualizar a Wiki](#)  
+👉 [Visualizar a Wiki](https://github.com/Gabriel-Costa-de-Jesus/estudos_full_stack/wiki)  
 
 ---
 
