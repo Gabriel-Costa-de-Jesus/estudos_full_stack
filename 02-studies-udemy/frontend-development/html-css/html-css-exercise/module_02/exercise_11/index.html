@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Elementos flutuantes</title>
+		<meta charset="utf-8">
+		
+		<style type="text/css">
+
+			#principal{
+				border: 5px solid red;
+				background: green;
+			}
+
+			.conteudo{
+				background: blue;
+				border: 1px solid gray;
+				width: 200px;
+				height: 200px;
+				margin: 10px;
+				float: right;
+			}
+
+			/*
+			.conteudo1{
+				background: red;
+				border: 1px solid gray;
+				width: 200px;
+				height: 200px;
+				margin: 10px;
+				float: left;
+			}*/
+
+			.conteudo-zero{
+				background: red;
+				border: 1px solid gray;
+				width: 200px;
+				height: 200px;
+				margin: 10px;
+			}
+
+			.clear{
+				clear: both;
+			}
+
+		</style>
+		
+	</head>
+	<body>
+
+		<div id="principal">
+
+			<div class="conteudo">
+				Conteúdo 1
+			</div>
+
+			<div class="conteudo">
+				Conteúdo 2
+			</div>
+
+			<div class="conteudo">
+				Conteúdo 3
+			</div>
+
+		<p class="clear">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales sapien magna, quis congue augue consequat et. Praesent tristique blandit scelerisque. In hac habitasse platea dictumst. Mauris non blandit neque. Maecenas facilisis pulvinar enim, sit amet dignissim quam. Sed sodales massa ligula, sit amet pellentesque ipsum pellentesque eget. Quisque sem dolor, ornare tincidunt rutrum ac, imperdiet sed elit. Fusce pharetra magna sed ante placerat, nec faucibus dui viverra. Duis ligula dui, porttitor in neque ac, accumsan vestibulum nibh. Quisque ullamcorper lobortis sodales. Maecenas purus mauris, vulputate sed viverra sit amet, suscipit id turpis.
+		</p>
+			<!--
+			<div class="clear">aa</div> -->
+
+		</div>
+		
+
+	</body>
+
+</html>
+
+<!-- 
+
+
+**Elementos Flutuantes (float)**
+
+- **Função do `float`:**  
+  Quando aplicamos o `float` em um elemento (como uma `<div>`), ele **sai do fluxo normal** da página e "flutua" para a esquerda ou direita. Isso faz com que o conteúdo ao redor (como texto ou outros elementos) se reorganize, preenchendo o espaço ao lado do elemento flutuante.
+
+- **Comportamento dentro de um elemento pai:**  
+  Se a `<div>` flutuante estiver dentro de um elemento pai, ela ficará **presa à caixa do pai**. Isso significa que ela não vai ultrapassar os limites do seu contêiner, mesmo flutuando. Caso o elemento pai seja pequeno demais para caber todas as divs flutuantes, ela irá acabar esticando o elemento pai para poder caber
+
+- **Importância do `clear`:**  
+  Para garantir que outros elementos na página **retornem ao fluxo normal**, ou seja, um embaixo do outro, é importante usar o **`clear`**.  
+  - **`clear: both`**: faz com que o elemento "limpe" qualquer flutuação anterior (esquerda ou direita), retornando a disposição padrão de blocos empilhados verticalmente.
+
+- **Sem o `clear`:**  
+  Se você não usar o `clear`, o próximo elemento pode continuar flutuando ao lado do elemento anterior, criando um layout inesperado, pois ele seguirá o fluxo de flutuação.
+
+ -->
+
+<!-- Objetivo da Atividade: Utilizar elementos flutuantes -->
