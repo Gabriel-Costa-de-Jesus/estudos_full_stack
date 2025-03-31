@@ -9,17 +9,18 @@
 
 // Definindo o Struct
 struct SupermercadoSystem {
-   char nomeProduto[50];
-   float precoProduto;
-   int codigoProduto;
+   char nomeProduto[50], nomeCliente[50], cpfCliente[15];
+   float precoProduto, compraCliente;
+   int codigoProduto, estoqueProduto;
 }; struct SupermercadoSystem sistema[5];
 
 // Declarando Variáveis Globais
-int contador = 0; //Core
+int contadorProduto = 0, contadorCliente =0, contadorCompra = 0; //Core
 
 // Chamando Protótipos de Funções
 void replace_and_convert(char * txt);
 void pressAnyKey();
+void erro();
 
 // Funções principais do meu sistema
 int menu(){
@@ -49,38 +50,42 @@ void cadastrarProduto(){
 
     char inputDate[50];
     printf("\nDigite o nome do Produto para ser cadastrado: ");
-    fgets(sistema[contador].nomeProduto, 50, stdin);
-    sistema[contador].nomeProduto[strcspn(sistema[contador].nomeProduto, "\n")] = '\0'; // Remove o '\n'
-
+    fgets(sistema[contadorProduto].nomeProduto, 50, stdin);
+    sistema[contadorProduto].nomeProduto[strcspn(sistema[contadorProduto].nomeProduto, "\n")] = '\0'; // Remove o '\n'
+    
 
     printf("\nDigite o preço do Produto para ser cadastrado: ");
     scanf("%s", inputDate);
     replace_and_convert(inputDate); // Troca . por , para não causar erro
-    sistema[contador].precoProduto = strtof(inputDate, NULL); // Converte char para float
-    sistema[contador].codigoProduto = ((int)time(NULL) % 100000) + contador; // A biblioteca Time retorna o número de segundos desde 1º de janeiro de 1970, o Objetivo de sua implementação era apenas pra ficar gerando números únicos para servir de código, o + contador no final é para garantir que nunca iria se repetir, pois essa função se baseia no tempo de agora
+    sistema[contadorProduto].precoProduto = strtof(inputDate, NULL); // Converte char para float 
+    sistema[contadorProduto].codigoProduto = ((int)time(NULL) % 100000) + contadorProduto; // A biblioteca Time retorna o número de segundos desde 1º de janeiro de 1970, o Objetivo de sua implementação era apenas pra ficar gerando números únicos para servir de código, o + contadorProduto no final é para garantir que nunca iria se repetir, pois essa função se baseia no tempo de agora
     
+    printf("\nDigite a Quantidade de produto no estoque: ");
+    scanf("%d", &sistema[contadorProduto].estoqueProduto);
+
     printf("\nProduto Cadastrado Com Sucesso!");
-    contador++;
+    contadorProduto++;
     
 }
 
 void listarProdutos(){
-    if (contador == 0){
+    if (contadorProduto == 0){
         printf("\nCadastre algum Produto Primeiro!");
         return;
     }
 
     printf("\nProdutos Cadastrados no Sistema!");
-    for (int i = 0; i < contador; i++) {
+    for (int i = 0; i < contadorProduto; i++) {
         printf("\n\nProduto: %s",sistema[i].nomeProduto);
         printf("\nPreço: %.2f",sistema[i].precoProduto);
         printf("\nCódigo de Produto: %d",sistema[i].codigoProduto);
+        printf("\nQuantidade no estoque: %d",sistema[i].estoqueProduto);
     }
     pressAnyKey();
 }
 
 void buscarProdutos() {
-    if (contador == 0){
+    if (contadorProduto == 0){
         printf("\nCadastre algum Produto Primeiro!");
         return;
     }
@@ -96,7 +101,7 @@ void buscarProdutos() {
 
     replace_and_convert(produtoNome);
   
-    for (int i = 0; i < contador; i++) {
+    for (int i = 0; i < contadorProduto; i++) {
         char produto[50];
         strcpy(produto, sistema[i].nomeProduto);
         replace_and_convert(produto);
@@ -106,6 +111,7 @@ void buscarProdutos() {
             printf("\nNome: %s", sistema[i].nomeProduto);
             printf("\nPreço: %.2f", sistema[i].precoProduto);
             printf("\nCódigo: %d\n", sistema[i].codigoProduto);
+            printf("\nQuantidade no estoque: %d",sistema[i].estoqueProduto);
             pressAnyKey();
             return; 
         }
@@ -115,7 +121,7 @@ void buscarProdutos() {
 }
 
 void apagarProduto() {
-    if (contador == 0) {
+    if (contadorProduto == 0) {
         printf("\nNenhum produto cadastrado!\n");
         return;
     }
@@ -131,15 +137,15 @@ void apagarProduto() {
 
     replace_and_convert(produtoNome);
 
-    for (int i = 0; i < contador; i++) {
+    for (int i = 0; i < contadorProduto; i++) {
         char produto[50]; 
         strcpy(produto, sistema[i].nomeProduto);
         replace_and_convert(produto);
         
         if (strcmp(produtoNome, produto) == 0 || codigoBuscar == sistema[i].codigoProduto) {
             printf("Produto %s Removido com sucesso!", produto);
-            sistema[i] = sistema[contador -1]; // Troca o que está nessa posição pelo último item adicionado
-            contador--; // Atualiza o contador
+            sistema[i] = sistema[contadorProduto -1]; // Troca o que está nessa posição pelo último item adicionado
+            contadorProduto--; // Atualiza o contadorProduto
             pressAnyKey();
             return;
         }
@@ -148,49 +154,305 @@ void apagarProduto() {
 }
 
 void alterarProdutos(){
-    if (contador == 0) {
-        printf("\nNenhum produto cadastrado!\n");
+    if (contadorProduto == 0) {
+        printf("\nNenhum Produto Cadastrado!");
         return;
     }
 
-    listarProdutos();
-
     fflush(stdin);
-
     char produtoNome[50];
-    printf("\n\nDigite o nome do Produto que você deseja alterar: ");
+
+    printf("Digite o nome do produto ou código do sistema: ");
     fgets(produtoNome, 50, stdin);
-    produtoNome[strcspn(produtoNome, "\n")] = '\0';
+    produtoNome[strcspn(produtoNome, "\n")] = '\0'; 
 
-    int codigoBuscar = atoi(produtoNome);
-    
+    int codigoBuscado = atoi(produtoNome);
+
     replace_and_convert(produtoNome);
-
-    for (int i = 0; i < contador ; i++) {
+  
+    for (int i = 0; i < contadorProduto; i++) {
         char produto[50];
         strcpy(produto, sistema[i].nomeProduto);
         replace_and_convert(produto);
-
-        if (strcmp(produtoNome, produto) == 0 || codigoBuscar == sistema[i].codigoProduto) {
-            fflush(stdin); 
-
-            char inputDate[50];
-            printf("\nDigite o nome do novo Produto: ");
-            fgets(sistema[i].nomeProduto, 50, stdin);
-            sistema[i].nomeProduto[strcspn(sistema[i].nomeProduto, "\n")] = '\0'; // Remove o '\n'
         
-        
-            printf("\nDigite o preço do novo Produto: ");
-            scanf("%s", inputDate);
-            replace_and_convert(inputDate);
-            sistema[i].precoProduto = strtof(inputDate, NULL);
-            sistema[i].codigoProduto = ((int)time(NULL) % 100000) + contador; 
-            
-            printf("\nProduto Alterado Com Sucesso!");
+        if (strcmp(produtoNome, produto) == 0 || codigoBuscado == sistema[i].codigoProduto) {
+            int opcaoProduto;
+            printf("\nO que você deseja alterar?");
+            printf("\n1 - Nome do Produto: ");
+            printf("\n2 - Preço do Produto: ");
+            printf("\n3- Estoque do Produto");
+            printf("\nEscolha uma opção: ");
+            scanf("%d", &opcaoProduto);
+
+            fflush(stdin);
+
+            switch (opcaoProduto) {
+            case 1:
+                printf("\nDigite o novo nome do Produto: ");
+                fgets(sistema[i].nomeProduto, 50, stdin);
+                sistema[i].nomeProduto[strcspn(sistema[i].nomeProduto, "\n")] = '\0';
+                break;
+            case 2:
+                 printf("\nDigite o novo preço do Produto: ");
+                 scanf("%f", &sistema[i].precoProduto);
+                 break;
+            case 3:
+                printf("\nDigite a nova quantidade do estoque do Produto: ");
+                scanf("%d", &sistema[i].estoqueProduto);
+                break;
+            default:
+                printf("\nOpção Inválida: ");
+                break;
+            }
+
+            printf("\nProduto %s Alterado com Sucesso!", sistema[i].nomeProduto);     
             return;
         }
     }
-    printf("\nProduto Não encontrado no Sistema");
+      printf("Cliente não encontrado! ");
+}
+
+void cadastrarCliente(){
+
+    fflush(stdin);
+    printf("\nDigite o nome do cliente para ser cadastrado: ");
+    fgets(sistema[contadorCliente].nomeCliente, 50, stdin);
+    sistema[contadorCliente].nomeCliente[strcspn(sistema[contadorCliente].nomeCliente, "\n")] = '\0';
+
+    printf("\nDigite o CPF do cliente para ser cadastrado: ");
+    scanf("%s", sistema[contadorCliente].cpfCliente);
+
+    printf("\nCliente Cadastrado com Sucesso!");
+    contadorCliente++;
+}
+
+void listarClientes() {
+    if (contadorCliente == 0) {
+        printf("\nNenhum Cliente Cadastrado!");
+        return;
+    }
+
+    printf("\nClientes Cadastrados no Sistema: \n");
+    for (int i = 0; i < contadorCliente; i++) {
+        printf("\nCliente: %s", sistema[i].nomeCliente);
+        printf("\nCPF: %s", sistema[i].cpfCliente);
+    }
+
+    pressAnyKey();
+}
+
+void buscarCliente() {
+    if (contadorCliente == 0) {
+        printf("\nNenhum Cliente Cadastrado!");
+        return;
+    }
+
+    fflush(stdin);
+
+    char clienteBuscar[50], cpfBuscar[15];
+    printf("\nDigite o nome do cliente ou CPF: ");
+    fgets(clienteBuscar, 50, stdin);
+    clienteBuscar[strcspn(clienteBuscar, "\n")] = '\0';
+    //char cpfBuscar[15] = clienteBuscar[50]; Em C não pode se comparar dessa forma pois são vetores
+    strcpy(cpfBuscar, clienteBuscar);
+    
+
+    replace_and_convert(clienteBuscar);
+
+    for (int i = 0; i < contadorCliente; i++){
+
+        char clienteBuscado[50];
+        strcpy(clienteBuscado, sistema[i].nomeCliente);
+        replace_and_convert(clienteBuscado);
+        
+        if (strcmp(clienteBuscado, clienteBuscar) == 0 || strcmp(cpfBuscar, sistema[i].cpfCliente) == 0) {
+            printf("\nCliente %s Encontrado!", sistema[i].nomeCliente);
+            printf("\n Histórico de Compras, Dados do cliente, endereço de entrega, contato"); // Talvez faça furutamente
+
+            pressAnyKey();
+            return;
+        }
+    }
+      printf("Cliente não encontrado! ");
+}
+
+void apagarCliente() {
+    if (contadorCliente == 0) {
+        printf("\nNenhum Cliente Cadastrado!");
+        return;
+    }
+
+    fflush(stdin);
+
+    char clienteBuscar[50], cpfBuscar[15];
+    printf("\nDigite o nome do cliente ou CPF: ");
+    fgets(clienteBuscar, 50, stdin);
+    clienteBuscar[strcspn(clienteBuscar, "\n")] = '\0';
+    //char cpfBuscar[15] = clienteBuscar[50];
+    strcpy(cpfBuscar, clienteBuscar);
+    
+
+    replace_and_convert(clienteBuscar);
+
+    for (int i = 0; i < contadorCliente; i++){
+
+        char clienteBuscado[50];
+        strcpy(clienteBuscado, sistema[i].nomeCliente);
+        replace_and_convert(clienteBuscado);
+        
+        if (strcmp(clienteBuscado, clienteBuscar) == 0 || strcmp(cpfBuscar, sistema[i].cpfCliente) == 0) {
+            printf("Cliente %s Apagado com Sucesso!", sistema[i].nomeCliente);
+            sistema[i] = sistema[contadorCliente -1]; // Copia o item da última posição
+            contadorCliente--;  
+            return;
+        }
+    }
+      printf("Cliente não encontrado! ");
+}
+
+void alterarCliente() {
+    if (contadorCliente == 0) {
+        printf("\nNenhum Cliente Cadastrado!");
+        return;
+    }
+
+    fflush(stdin);
+
+    char clienteBuscar[50], cpfBuscar[15];
+    printf("\nDigite o nome do cliente ou CPF: ");
+    fgets(clienteBuscar, 50, stdin);
+    clienteBuscar[strcspn(clienteBuscar, "\n")] = '\0';
+    //char cpfBuscar[15] = clienteBuscar[50];
+    strcpy(cpfBuscar, clienteBuscar);
+    
+
+    replace_and_convert(clienteBuscar);
+
+    for (int i = 0; i < contadorCliente; i++){
+
+        char clienteBuscado[50];
+        strcpy(clienteBuscado, sistema[i].nomeCliente);
+        replace_and_convert(clienteBuscado);
+        
+        if (strcmp(clienteBuscado, clienteBuscar) == 0 || strcmp(cpfBuscar, sistema[i].cpfCliente) == 0) {
+            int opcaoCliente;
+            printf("\nO que você deseja alterar?");
+            printf("\n1 - Nome do Cliente:");
+            printf("\n2 - CPF do cliente:");
+            printf("\nEm breve novas opções...");
+            printf("\nEscolha uma opção: ");
+            scanf("%d", &opcaoCliente);
+
+            fflush(stdin);
+
+            switch (opcaoCliente) {
+            case 1:
+                printf("\nDigite o novo nome do Cliente: ");
+                fgets(sistema[i].nomeCliente, 50, stdin);
+                sistema[i].nomeCliente[strcspn(sistema[i].nomeCliente, "\n")] = '\0';
+                break;
+            case 2:
+                 printf("\nDigite o CPF do cliente para ser cadastrado: ");
+                 scanf("%s", sistema[i].cpfCliente);
+                 break;
+            default:
+                printf("\nOpção Inválida: ");
+                break;
+            }
+
+            printf("\nCliente %s Alterado com Sucesso!", sistema[i].nomeCliente);     
+            return;
+        }
+    }
+      printf("Cliente não encontrado! ");
+}
+
+void registrarCompra() {
+    if (contadorCliente == 0) {
+        printf("\nNenhum Cliente Cadastrado!");
+        return;
+    }
+    else if (contadorProduto == 0) {
+        printf("\nNenhum Produto Cadastrado!");
+        return;
+    }
+
+    fflush(stdin);
+    
+    printf("\nClientes Cadastrados no Sistema: \n");
+    for (int i = 0; i < contadorCliente; i++) {
+        printf("\nCliente: %s", sistema[i].nomeCliente);
+        printf("\nCPF: %s", sistema[i].cpfCliente);
+    }
+
+        
+            char clienteComprar[50], clienteComprarCPF[15];
+            printf("\nDigite o nome do Cliente ou CPF que irá efetuar a compra: ");
+            fgets(clienteComprar, 50, stdin);
+            clienteComprar[strcspn(clienteComprar, "\n")] = '\0';
+
+            strcpy(clienteComprarCPF, clienteComprar);
+
+            replace_and_convert(clienteComprar);
+            for (int i = 0; i < contadorCliente; i++) {
+                replace_and_convert(sistema[i].nomeCliente);
+                
+
+                if (strcmp(clienteComprar, sistema[i].nomeCliente) == 0 || strcmp(clienteComprarCPF, sistema[i].cpfCliente) == 0) {
+
+                    contadorCompra = i; // Apenas para saber a posição do cliente no vetor
+                    printf("\nCliente %s Selecionado", sistema[i].nomeCliente);
+
+                    printf("\n\nProdutos Cadastrados no Sistema!");
+                    for (int i = 0; i < contadorProduto; i++) {
+                        printf("\n\nProduto: %s",sistema[i].nomeProduto);
+                        printf("\nPreço: %.2f",sistema[i].precoProduto);
+                        printf("\nCódigo de Produto: %d",sistema[i].codigoProduto);
+                        printf("\nQuantidade no estoque: %d",sistema[i].estoqueProduto);
+                    }
+                
+                    int produtoOpcao;
+                    float soma = 0;
+
+                    do {
+                        printf("\n\nO que você deseja fazer?");
+                        printf("\n1 - Lançar Produto");
+                        printf("\n2 - Fechar Comprar");
+                        printf("\nEscolha sua opção: ");
+                        scanf("%d", &produtoOpcao);
+
+                        int produtocodigo; // Não pode declarar dentro do Switch
+                     
+
+                        switch (produtoOpcao) {
+                        case 1:
+                            printf("\nDigite o código do produto: ");
+                            scanf("%d", &produtocodigo);
+                            
+        
+                            for (int i = 0; i < contadorProduto; i++) {
+                                if (produtocodigo == sistema[i].codigoProduto) {
+                                    printf("\n\nProduto: %s Preço R$ %.2f", sistema[i].nomeProduto, sistema[i].precoProduto);
+                                    soma += sistema[i].precoProduto;
+                                    printf("\nTotal da Compra: R$ %.2f", soma);
+                                    sistema[contadorCompra].compraCliente = soma; 
+                                    sistema[i].estoqueProduto--;
+                                }
+                            }
+                            break;
+                        case 2:
+                            printf("\n\nCompra Finalizada! Total: %.2f", sistema[contadorCompra].compraCliente);
+                            break;
+                        
+                        default:
+                            erro();
+                            break;
+                        }
+                        
+                    } while (produtoOpcao != 2);           
+                }
+
+           }  
 }
 // Funções Auxiliares
 void replace_and_convert(char * txt) { //Minha função para formatação de dados
@@ -226,7 +488,7 @@ void clearDelay(){
     system("cls");
 }
 void pressAnyKey(){
-    printf("\nPressione qualquer tecla e em seguida Enter para continuar. . .");
+    printf("\n\nPressione qualquer tecla e em seguida Enter para continuar. . .");
     getchar(); // Captura a tecla pressionada
     getchar(); // Para evitar problemas com o buffer
 }
@@ -258,6 +520,24 @@ int main() {
         case 5:
             alterarProdutos();
             break;
+        case 6:
+            cadastrarCliente();
+            break;
+        case 7:
+            listarClientes();
+            break;
+        case 8:
+            buscarCliente();
+            break;
+         case 9:
+            apagarCliente();
+            break;    
+        case 10:
+            alterarCliente();
+            break;
+        case 11:
+            registrarCompra();
+            break;
         case 12:
             clearDelay();
             break;
@@ -269,7 +549,7 @@ int main() {
             break;
         }
 
-        sleep(3);
+        sleep(2);
         system("cls");
     } while (opcao != 13);
 }
