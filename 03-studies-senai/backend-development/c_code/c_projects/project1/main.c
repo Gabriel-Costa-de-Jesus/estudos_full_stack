@@ -454,15 +454,7 @@ void registrarCompra() {
 
            }  
 }
-// Funções Auxiliares
-void replace_and_convert(char * txt) { //Minha função para formatação de dados
-    for (int i = 0; txt[i] != '\0'; i++) {
-        if (txt[i] == '.'){ // Função para troca de caractere
-            txt[i] = ',';
-        }
-        txt[i] = toupper(txt[i]); // Função para converter para Maiúsculo
-    }
-}
+
 void sair() {
     printf("Saindo do Sistema");
     for (int i = 0; i < 5; i++) {
@@ -473,7 +465,15 @@ void sair() {
     sleep(3);
     system("cls");
 }
-
+// Funções Auxiliares
+void replace_and_convert(char * txt) { //Minha função para formatação de dados
+    for (int i = 0; txt[i] != '\0'; i++) {
+        if (txt[i] == '.'){ // Função para troca de caractere
+            txt[i] = ',';
+        }
+        txt[i] = toupper(txt[i]); // Função para converter para Maiúsculo
+    }
+}
 void erro() {
     printf("Opção Inválida! Tente Novamente! \n");
 }
@@ -491,6 +491,10 @@ void pressAnyKey(){
     printf("\n\nPressione qualquer tecla e em seguida Enter para continuar. . .");
     getchar(); // Captura a tecla pressionada
     getchar(); // Para evitar problemas com o buffer
+}
+void delay() {
+    sleep(2);
+    system("cls");
 }
 // Função Principal Main
 int main() {
@@ -549,7 +553,6 @@ int main() {
             break;
         }
 
-        sleep(2);
-        system("cls");
+        delay();
     } while (opcao != 13);
 }
