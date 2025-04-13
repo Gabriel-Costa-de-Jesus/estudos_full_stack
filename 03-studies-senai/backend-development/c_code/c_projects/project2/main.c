@@ -4,7 +4,6 @@
 #include <string.h>
 #include <unistd.h>
 #include <locale.h>
-#include <ctype.h>
 
 // Definição de Tamanho
 #define MAX_SYSTEM 500
@@ -118,10 +117,10 @@ void gerarRelatorio(){
 
 	for (int i =0; i < contador; i++) {
         calcularMedia(i); // Se a pessoa não tiver calculado a média antes
-        if (estudante[i].media > estudante[posicaoMaior].media) { // O primeiro número sempre será maior que o segundo
+        if (estudante[i].media > estudante[posicaoMaior].media) { // Só atualiza se o número da posição 0 for maior que os outros números das outras posições, caso não seja, o maior número será o da posição 0
             posicaoMaior = i;
         }
-        if (estudante[i].media < estudante[posicaoMenor].media) { // Só atualiza após o segundo loop
+        if (estudante[i].media < estudante[posicaoMenor].media) { // Só atualiza se o número da posição 0 for menor que os outros números das outras posições, caso não seja, o menor número será o da posição 0
             posicaoMenor =i;
         }			   		  	   					 	   
     }    
