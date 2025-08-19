@@ -1,3 +1,5 @@
+package exercise_00;
+
 public class Main { // A class tem que ser o nome do arquivo
     public static void main(String[] args) {
         //Tipo de Dado + Nome da Variável = Valor
