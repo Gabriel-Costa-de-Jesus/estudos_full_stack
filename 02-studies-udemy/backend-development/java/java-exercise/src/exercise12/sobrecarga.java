@@ -1,21 +1,20 @@
-package exercise09;
+package exercise12;
 
-import exercise09.*;
+import exercise12.Produtos;
 
 import java.util.Scanner;
 
-public class ToString {
+public class sobrecarga {
     public static void main(String[]args){
         Scanner sc = new Scanner(System.in);
 
-        Produtos produto = new Produtos();
-        System.out.println("Digite o nome do Produto: ");
-        produto.nome = sc.nextLine(); // Só é possível fazer isso pq é public
-        System.out.println("Digite o preço do Produto");
-        produto.preco = sc.nextDouble();
-        System.out.println("Quantidade no estoque");
-        produto.quantidade = sc.nextInt();
 
+        System.out.println("Digite o nome do Produto: ");
+        String nome = sc.nextLine(); // Só é possível fazer isso pq é public
+        System.out.println("Digite o preço do Produto");
+        double preco = sc.nextDouble();
+
+        Produtos produto = new Produtos(nome, preco);// Diferente da instancia normal, está instancia te obriga a passar os valores quando é declarada
         //System.out.println(produto.toString()); // converte objeto para string, pd usar pra formatar
 
         System.out.println("Digite a quantidade de produtos para adicionar ao estoque");
