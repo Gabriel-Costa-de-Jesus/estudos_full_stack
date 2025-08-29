@@ -1,6 +1,6 @@
 package exercise03;
 
-import exercise03.*;
+import exercise03.Macaco;
 
 public class Main {
     public static void main(String[] args) {
