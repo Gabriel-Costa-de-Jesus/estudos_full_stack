@@ -1,8 +1,8 @@
-package exercise02.Master;
+package exercise_list2.exercise02.Master;
 
 import java.util.Scanner;
 import java.util.Random;
-import exercise02.Classes.*;
+import exercise_list2.exercise02.Classes.*;
 
 public class Main {
     public static int menuJ1() {

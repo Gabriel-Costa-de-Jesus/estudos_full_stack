@@ -1,4 +1,4 @@
-package exercise04;
+package exercise_list2.exercise04;
 
 public class Alimento {
     private String nome;

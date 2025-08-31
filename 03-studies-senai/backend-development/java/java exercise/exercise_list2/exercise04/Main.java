@@ -1,4 +1,4 @@
-package exercise04;
+package exercise_list2.exercise04;
 
 public class Main {
     public static void main(String[]args){

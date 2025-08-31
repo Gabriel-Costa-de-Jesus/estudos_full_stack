@@ -1,4 +1,4 @@
-package extras;
+package exercise_list1.extras;
 
 public class getandset {
     public static class Pessoa { // Quando coloca Static signfica que é para o mesmo arquivo, interno

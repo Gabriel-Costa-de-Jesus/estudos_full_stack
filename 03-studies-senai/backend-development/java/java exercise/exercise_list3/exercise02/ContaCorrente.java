@@ -1,4 +1,4 @@
-package exercise02;
+package exercise_list3.exercise02;
 
 public class ContaCorrente {
     private int numeroDaConta;

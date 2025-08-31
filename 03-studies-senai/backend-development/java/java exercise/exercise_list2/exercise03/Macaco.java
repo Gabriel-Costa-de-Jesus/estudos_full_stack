@@ -1,4 +1,4 @@
-package exercise03;
+package exercise_list2.exercise03;
 
 public class Macaco {
     String nome;

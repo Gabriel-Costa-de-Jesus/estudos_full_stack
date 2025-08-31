@@ -1,4 +1,4 @@
-package exercise03;
+package exercise_list3.exercise03;
 
 public class ContaInvestimento {
     private int numeroDaConta;
