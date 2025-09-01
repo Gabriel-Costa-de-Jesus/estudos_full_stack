@@ -31,7 +31,7 @@ public class Main {
         double n1 = sc.nextInt();
         System.out.print("Digite a segunda nota: ");
         double n2 = sc.nextInt();
-        System.out.print("Digite a primeira nota: ");
+        System.out.print("Digite a terceira nota: ");
         double n3 = sc.nextInt();
         estudante[contador] = new Estudante(nome, matricula, n1, n2, n3);
         contador++;
@@ -42,41 +42,56 @@ public class Main {
 
     public static void opexibirMedias(){
         for (int i =0; i < contador; i++) {
-            System.out.printf("\nEstudante: %s", estudante[i].getNome());
+            System.out.printf("\n3Estudante: %s", estudante[i].getNome());
             System.out.printf("\nNota da Primeira Unidade: %.2f",estudante[i].getN1());
             System.out.printf("\nNota da Segunda Unidade: %.2f",estudante[i].getN2());
             System.out.printf("\nNota da Terceira Unidade: %.2f",estudante[i].getN3());
 
-            System.out.printf("\nMédia dos estudante: %.2f",estudante[i].calcularMedia());
+            System.out.printf("\nMédia do estudante: %.2f%n",estudante[i].calcularMedia());
         }
     }
     public static void opclassificarAprovacao(){
-        int contadorReprovados = 0, contadorAprovados =0;
+         contadorReprovados = 0; contadorAprovados =0;
         for (int i =0; i < contador; i++) {
             System.out.printf("\nEstudante: %s", estudante[i].getNome());
             System.out.printf("\nMédia dos estudante: %.2f",estudante[i].calcularMedia());
             if (estudante[i].calcularMedia() > 7){
-                System.out.print("\nAprovado");
+                System.out.print("\nAprovado\n");
                 contadorAprovados++;
 
             }
             else {
-                System.out.print("\nReprovado");
+                System.out.print("\nReprovado\n");
                 contadorReprovados++;
             }
         }
     }
     public static void opgerarRelatorio(){
-        int contadormaior=0, contadormenor =-999;
-        for (int i =0; i < contador; i++){
-            if (estudante[i].calcularMedia() > estudante[contadormaior]){
-                indiceMaior = i;
+        contadorReprovados = 0; contadorAprovados =0;
+        for (int i =0; i < contador; i++) {
+            if (estudante[i].calcularMedia() > 7){
+                contadorAprovados++;
+            }
+            else {
+                contadorReprovados++;
             }
         }
-        System.out.printf("Quantidade de alunos aprovados: %d", contadorAprovados);
-        System.out.printf("Quantidade de alunos Reprovados: %d", contadorReprovados);
-        System.out.printf("Estudante com a maior média: %.2f", );
-        System.out.printf("Estudante com a menor média: %.2f", );
+
+        double contadormaior=0, contadormenor = 99;
+        for (int i =0; i < contador; i++){
+            if (estudante[i].calcularMedia() > contadormaior){
+                indiceMaior = i;
+                contadormaior= estudante[i].calcularMedia();
+            }
+            if (estudante[i].calcularMedia() < contadormenor){
+                indiceMenor=i;
+                contadormenor= estudante[i].calcularMedia();
+            }
+        }
+        System.out.printf("\nQuantidade de alunos aprovados: %d", contadorAprovados);
+        System.out.printf("\nQuantidade de alunos Reprovados: %d", contadorReprovados);
+        System.out.printf("\nEstudante com a maior média: %s", estudante[indiceMaior].getNome());
+        System.out.printf("\nEstudante com a menor média: %s%n", estudante[indiceMenor].getNome());
     }
     public static void sair(){
         System.out.println("\nSaindo do Sistema...");
