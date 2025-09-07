@@ -3,8 +3,13 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
+<<<<<<< HEAD
       <sourceFolder url="file://$MODULE_DIR$/02-studies-udemy/backend-development/java/java-exercise" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/02-studies-udemy/backend-development/java/javaFX" isTestSource="false" />
+=======
+      <sourceFolder url="file://$MODULE_DIR$/02-studies-udemy/backend-development/java/java-exercise/graphical_interface" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02-studies-udemy/backend-development/java/java-exercise/module1" isTestSource="false" />
+>>>>>>> 0bd50949e0fd282b4e5b3899472c188c4502f06a
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
