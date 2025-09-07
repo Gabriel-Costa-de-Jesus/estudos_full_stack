@@ -42,7 +42,7 @@ public class Main {
 
     public static void opexibirMedias(){
         for (int i =0; i < contador; i++) {
-            System.out.printf("\n3Estudante: %s", estudante[i].getNome());
+            System.out.printf("\nEstudante: %s", estudante[i].getNome());
             System.out.printf("\nNota da Primeira Unidade: %.2f",estudante[i].getN1());
             System.out.printf("\nNota da Segunda Unidade: %.2f",estudante[i].getN2());
             System.out.printf("\nNota da Terceira Unidade: %.2f",estudante[i].getN3());
