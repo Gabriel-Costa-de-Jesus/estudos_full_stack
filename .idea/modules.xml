@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/02-studies-udemy/02-studies-udemy.iml" filepath="$PROJECT_DIR$/02-studies-udemy/02-studies-udemy.iml" />
-      <module fileurl="file://$PROJECT_DIR$/03-studies-senai/03-studies-senai.iml" filepath="$PROJECT_DIR$/03-studies-senai/03-studies-senai.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/estudos_full_stack.iml" filepath="$PROJECT_DIR$/.idea/estudos_full_stack.iml" />
     </modules>
   </component>

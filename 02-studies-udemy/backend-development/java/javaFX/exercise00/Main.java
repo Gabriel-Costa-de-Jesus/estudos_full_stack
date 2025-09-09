@@ -1,4 +1,4 @@
-package exercicio01;
+package exercise00;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
