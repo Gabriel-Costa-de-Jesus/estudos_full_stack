@@ -1,4 +1,4 @@
-package exercise04;
+package exercise03;
 
 public class matematicajava {
     public static void main(String[]args){
