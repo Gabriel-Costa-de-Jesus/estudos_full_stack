@@ -45,7 +45,7 @@ public class MainViewController implements Initializable {
 
     @FXML
     private void onMenuItemAboutAction(){
-        loadView("/gui/About.fxml", x -> {});
+        loadView("/gui/About.fxml",  -> {});
     }
     private synchronized <T> void loadView(String absoluteName, Consumer<T> initializingAction){
         try {
