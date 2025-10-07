@@ -1,4 +1,4 @@
-package Prova2;
+package Questao3;
 
 public class Tamagushi {
     private String nome;
