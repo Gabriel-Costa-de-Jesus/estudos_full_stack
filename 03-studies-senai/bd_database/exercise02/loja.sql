@@ -47,8 +47,8 @@ CREATE TABLE compras (
             cp.data_compra,
             p.descricao as Produto,
             p.preco
-	FROM compras cp
-    INNER JOIN clientes cl ON cl.id_cliente = cp.id_cliente_compra
-    INNER JOIN produtos p ON p.id_produto = cp.id_produto_compra;
+	FROM compras cp -- É da tabela que tem a chave estrangeira
+    INNER JOIN clientes cl ON cl.id_cliente = cp.id_cliente_compra -- Coloca o nome da tabela, cadastra o apelido cl dps faz o relacionamento com chave estrangeira
+    INNER JOIN produtos p ON p.id_produto = cp.id_produto_compra; -- RT
     
     
