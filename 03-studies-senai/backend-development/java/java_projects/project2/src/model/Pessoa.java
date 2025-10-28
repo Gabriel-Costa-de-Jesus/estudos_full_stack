@@ -3,6 +3,14 @@ package model;
 public class Pessoa {
     private String nome, telefone, email, usuario, senha;
 
+    public Pessoa(String nome, String telefone, String email, String usuario, String senha) {
+        this.nome = nome;
+        this.telefone = telefone;
+        this.email = email;
+        this.usuario = usuario;
+        this.senha = senha;
+    }
+    public Pessoa(){}
     public String getNome(){
         return nome;
     }
@@ -42,5 +50,4 @@ public class Pessoa {
         this.senha = senha;
     }
 
-    public void exibirDados(){}
 }
