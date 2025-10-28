@@ -7,4 +7,12 @@ public class Dono extends Pessoa{
 
     public Dono() {
     }
+    @Override
+    public String toString(){
+        return "Donos Cadastrados" +
+                "----------------------------------------\n" +
+                "Nome do Dono: " + getNome();
+
+
+    }
 }

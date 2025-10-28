@@ -41,9 +41,28 @@ public class Clinica {
     public void registrarAtendimento(Atendimento at){
         atendimentos.add(at);
     }
-    public void getAtendimento(){
-        for (Atendimento a: atendimentos){
+
+    public void getImprimirFuncionario(){
+        for (Funcionario f: funcionarios){
+            System.out.println(f);
+            System.out.println("-------------------------------");
+        }
+    }
+    public void getImprimirDonos(){
+        for (Dono d: donos){
+            System.out.println(d);
+            System.out.println("-------------------------------");
+        }
+    }
+    public void getImprimirAnimal(){
+        for (Dono a: donos){
             System.out.println(a);
+            System.out.println("-------------------------------");
+        }
+    }
+    public void getImprimirAtendimento(){
+        for (Atendimento at: atendimentos){
+            System.out.println(at);
             System.out.println("-------------------------------");
         }
     }

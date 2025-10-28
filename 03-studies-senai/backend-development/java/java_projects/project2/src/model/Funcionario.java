@@ -13,4 +13,13 @@ public class Funcionario extends Pessoa{
 
     }
 
+    @Override
+    public String toString(){
+        return "Funcionários Cadastrados" +
+                "----------------------------------------\n" +
+                "Funcionário: " + getNome() +
+                "Cargo: " + cargo +
+                "Salário: " + salario +
+                "----------------------------------------\n";
+    }
 }

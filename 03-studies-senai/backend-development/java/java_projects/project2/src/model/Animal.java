@@ -14,4 +14,11 @@ public class Animal {
         this.peso = peso;
     }
     public Animal(){}
+
+    @Override
+    public String toString(){
+        return
+               "Pet: " + nome +
+                "----------------------------------------\n";
+    }
 }

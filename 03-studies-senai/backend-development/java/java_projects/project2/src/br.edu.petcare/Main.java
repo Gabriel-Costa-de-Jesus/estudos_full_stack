@@ -45,7 +45,7 @@ public class Main {
 
         d = new Dono(nome, telefone, email, usuario, senha);
         c.cadastrarDono(d);
-        System.out.printf("Pessoa %s Cadastrada com Sucesso!", nome);
+        System.out.printf("Pessoa %s Cadastrada com Sucesso!\n", nome);
 
     }
 
@@ -67,20 +67,21 @@ public class Main {
 
         System.out.print("\nDigite o peso: ");
         float peso = sc.nextFloat();
+        sc.nextLine();
 
         System.out.print("\nDigite o nome do Dono para cadastrar o Pet: ");
         String buscarDono = sc.nextLine();
         boolean donoEncontrado = c.associarDono(buscarDono);
 
         if (donoEncontrado){
-            System.out.println("Dono encontrado! Associação realizada.");
+            System.out.println("Dono encontrado! Associação realizada.\n");
             String dono = buscarDono;
             a = new Animal(nome, especie, raca, dono, idade, peso);
             c.cadastrarAnimal(a);
 
         }
         else {
-            System.out.println("Dono não encontrado. Falha na associação.");
+            System.out.println("Dono não encontrado. Falha na associação.\n");
             return;
         }
     }
@@ -110,35 +111,33 @@ public class Main {
 
         f = new Funcionario(nome, telefone, email, usuario, senha, cargo, salario);
         c.cadastrarFuncionario(f);
-        System.out.printf("Pessoa %s Cadastrada com Sucesso!", nome);
+        System.out.printf("Pessoa %s Cadastrada com Sucesso!\n", nome);
 
     }
 
     private static void listarFuncionarios() {
         if (c.getFuncionarios().isEmpty()){
-            System.out.println("Lista Vazia! Cadastre algo primeiro! ");
+            System.out.println("Lista Vazia! Cadastre algo primeiro! \n");
             return;
         }
 
-        System.out.println("Funcionários Cadastrados!");
-        c.getFuncionarios();
+        c.getImprimirFuncionario();
     }
 
     private static void listarDonosEPet() {
         if (c.getDonos().isEmpty() && c.getAnimais().isEmpty()){
-            System.out.println("Lista Vazia! Cadastre algo primeiro! ");
+            System.out.println("Lista Vazia! Cadastre algo primeiro! \n");
             return;
         }
 
-        System.out.println("Donos e Pets Cadastrados!");
-        c.getDonos();
-        c.getAnimais();
+        c.getImprimirDonos();
+        c.getImprimirAnimal();
 
     }
 
     private static void registrarAtendimento() {
         if (c.getDonos().isEmpty() && c.getAnimais().isEmpty()){
-            System.out.println("Lista Vazia! Cadastre algo primeiro! ");
+            System.out.println("Lista Vazia! Cadastre algo primeiro! \n");
             return;
         }
 
@@ -161,18 +160,52 @@ public class Main {
 
     private static void exibirHistoricoAtendimento() {
         if (c.getAtendimentos().isEmpty()){
-            System.out.println("Lista Vazia! Cadastre algo primeiro! ");
+            System.out.println("Lista Vazia! Cadastre algo primeiro! \n");
             return;
         }
-        c.getAtendimento();
+        c.getImprimirAtendimento();
     }
 
     public static void erro(){
-        System.out.println("Opção Inválida! Tente Novamente");
+        System.out.println("Opção Inválida! Tente Novamente\n");
     }
 
-    public static void sair(){
-        System.out.println("Saindo do sistema...");
+    public static void sair() {
+        System.out.print("Saindo do sistema");
+
+        // Mostra três pontinhos com 1 segundo de intervalo
+        for (int i = 0; i < 3; i++) {
+            try {
+                Thread.sleep(1000); // delay de 1 segundo
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            System.out.print(".");
+        }
+
+        // Limpa a tela (funciona em Windows, Linux e Mac)
+        try {
+            if (System.getProperty("os.name").contains("Windows")) {
+                new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+            } else {
+                new ProcessBuilder("clear").inheritIO().start().waitFor();
+            }
+        } catch (Exception e) {
+            // Se não conseguir limpar, apenas pula várias linhas
+            for (int i = 0; i < 40; i++) {
+                System.out.println();
+            }
+        }
+
+        // Mensagem final
+        System.out.println("\nAgradecemos por Utilizar nosso Sistema!");
+
+        // Delay final de 2 segundos
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
     public static void main(String[]args){
         int opcao;
